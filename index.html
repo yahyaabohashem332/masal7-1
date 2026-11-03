@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masal ve Destanlarımız · Çalışma Soruları</title>
+<meta name="description" content="Masal ve Destanlarımız çalışma soruları, cevapları ve ezberlenecekler (Türkçe-Arapça).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Readex+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Night-blue + firefly-amber palette, same as the PDFs. Turkish sheet is LTR; the "what to memorise" part is
+   an Arabic page where each Turkish line sits on the left and its Arabic meaning on the right. */
+:root{--bg:#f6f7fb;--card:#fff;--ink:#1c1f2b;--muted:#5a6072;--night:#25336a;--head:#25336a;--soft:#eef1fb;
+  --amber:#c97c00;--amber-bg:#fff7e3;--amber-line:#ecd59a;--pen:#1f3db5;--pen-bg:#f1f4ff;--line:#d3d8e4;--zebra:#f7f8fc;
+  --no:#a3262f;--no-bg:#fbeeee;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1424;--card:#171d33;--ink:#e6e8f0;--muted:#9aa2b8;--night:#a9b8ff;--head:#2b3a78;
+  --soft:#1d2542;--amber:#f2b21b;--amber-bg:#2a2410;--amber-line:#5a4614;--pen:#9cb2ff;--pen-bg:#18203d;--line:#2c3454;
+  --zebra:#1a2139;--no:#ff8f97;--no-bg:#2c1619;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Lexend","Segoe UI",sans-serif}
+[lang=ar]{font-family:"Readex Pro","Segoe UI",Tahoma,sans-serif}
+.tr{font-family:"Lexend","Segoe UI",sans-serif;direction:ltr;unicode-bidi:isolate;text-align:left}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px}
+p{margin:0}
+
+/* hero */
+.hero{background:radial-gradient(circle at 12% 70%,#f2b21b55 0 3px,transparent 4px),radial-gradient(circle at 22% 85%,#f2b21b44 0 2px,transparent 3px),
+  radial-gradient(circle at 88% 30%,#f2b21b44 0 2px,transparent 3px),radial-gradient(circle at 80% 18%,#f3e3b0 0 34px,transparent 35px),
+  linear-gradient(160deg,#121a38,#25336a);color:#fff;padding:56px 0 44px}
+.hero small{display:block;color:#f2b21b;font-weight:600;letter-spacing:.2em;font-size:.8rem}
+.hero h1{margin:6px 0 4px;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.15}
+.hero .ar{font-size:1.1rem;opacity:.85}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;
+  background:#f2b21b;color:#1c1f2b}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid #ffffff66}
+.btn:hover{filter:brightness(1.08)}
+
+/* sections */
+section.part{padding:36px 0 8px}
+.part>.wrap>h2{font-size:1.5rem;color:var(--night);margin:0 0 14px;padding-bottom:6px;border-bottom:3px solid var(--night)}
+.part>.wrap>h2 span{display:block;font-size:.85rem;color:var(--amber);font-weight:600}
+h3{font-size:1.05rem;color:var(--night);margin:0 0 8px;display:flex;align-items:center;gap:8px}
+h3::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--amber);flex:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.story{background:var(--amber-bg);border-color:var(--amber-line);border-left:5px solid var(--amber)}
+.story p+p{margin-top:8px}
+.story q{quotes:"“" "”"}
+.q{display:flex;gap:10px;align-items:baseline;font-weight:700}
+.n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--night);color:var(--card);display:grid;place-items:center;font-size:.85rem}
+.ans{margin-top:10px;color:var(--pen);background:var(--pen-bg);border-left:4px solid var(--pen);border-radius:0 8px 8px 0;padding:8px 12px;font-weight:500}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.05em;color:#fff;background:var(--amber);border-radius:6px;padding:0 6px;margin-right:4px;vertical-align:1px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cols .card{margin:0}
+ul{margin:0;padding-left:20px;display:grid;gap:6px}
+li::marker{color:var(--amber)}
+ol.parts{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:p}
+ol.parts li{counter-increment:p;display:grid;grid-template-columns:24px 1fr;gap:8px}
+ol.parts li::before{content:counter(p);width:24px;height:24px;border-radius:50%;background:var(--amber);color:#fff;font-weight:700;font-size:.8rem;display:grid;place-items:center}
+.flow{display:flex;flex-wrap:wrap;direction:ltr;align-items:center;gap:6px;margin-top:12px;font-weight:700;color:var(--night);font-size:.9rem}
+.flow span{background:var(--amber-bg);border:1px solid var(--amber-line);border-radius:999px;padding:2px 12px}
+.flow i{font-style:normal;color:var(--amber)}
+.quote{background:var(--amber-bg);border-color:var(--amber-line)}
+.quote p{font-style:italic}
+.bottom{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.bottom td{white-space:nowrap}
+.bottom .card{margin:0}
+table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+th{background:var(--head);color:#fff;font-size:.82rem;font-weight:600;padding:6px 12px;text-align:left;letter-spacing:.05em}
+td{padding:7px 12px;border-top:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:var(--zebra)}
+td+td,th+th{border-left:1px solid var(--line)}
+
+/* ezber (Arabic page) */
+.ez .row{display:grid;grid-template-columns:1.3fr 1fr;direction:ltr;border-top:1px solid var(--line)}
+.ez .row:first-of-type{border-top:0}
+.ez .row:nth-of-type(even){background:var(--zebra)}
+.ez .row>div{padding:9px 14px}
+.ez .row>.ar{direction:rtl;text-align:right;border-left:1px solid var(--line);color:var(--muted)}
+.ez .rows{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.ez .rows .head{display:grid;grid-template-columns:1.3fr 1fr;direction:ltr;background:var(--head);color:#fff;font-size:.8rem;font-weight:600}
+.ez .rows .head>div{padding:5px 14px}
+.ez .rows .head>.ar{direction:rtl;text-align:right}
+.ez b{color:var(--night)}
+.k{display:inline-block;min-width:68px;text-align:center;font-weight:700;color:#fff;background:var(--amber);border-radius:999px;padding:0 8px;margin-right:6px;font-size:.8rem}
+.ez h3 .tr{font-size:.8rem;color:var(--amber);font-weight:600;margin-right:auto}
+.ez .num{width:24px;height:24px;border-radius:50%;background:var(--amber);color:#fff;display:grid;place-items:center;font-size:.8rem;flex:none}
+.ez h3::before{display:none}
+.ez .block{margin-bottom:22px}
+.say{display:grid;gap:4px;background:var(--amber-bg);border-right:5px solid var(--amber);border-radius:10px;padding:12px 16px}
+.say .tr{font-weight:600}
+.say .ar{color:var(--muted);font-size:.92rem}
+.say.pen{background:var(--pen-bg);border-right-color:var(--pen)}
+.say.pen .tr{color:var(--pen)}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:6px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:baseline;background:var(--soft);border-radius:8px;padding:8px 12px}
+ol.steps li::before{content:counter(s);width:24px;height:24px;border-radius:50%;background:var(--night);color:var(--card);font-size:.8rem;font-weight:700;display:grid;place-items:center}
+ol.steps .tr.ex{display:block;color:var(--pen);font-size:.92rem}
+.no{background:var(--no-bg);border-color:transparent}
+.no h3{color:var(--no)}
+.no ul{padding-right:20px;padding-left:0}
+.note{font-size:.88rem;color:var(--muted);margin-top:8px}
+footer{padding:26px 0 40px;text-align:center;color:var(--muted);font-size:.9rem}
+footer .btns{justify-content:center;margin:0 0 12px}
+footer .btn.ghost{color:var(--ink);border-color:var(--line)}
+
+@media (max-width:680px){
+  .cols,.bottom{grid-template-columns:1fr}
+  .ez .row,.ez .rows .head{grid-template-columns:1fr}
+  .ez .rows .head>.ar{display:none}
+  .ez .row>.ar{border-left:0;padding-top:0}
+  .card{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <small>ÇALIŞMA SORULARI · 7. SINIF</small>
+    <h1>Masal ve Destanlarımız</h1>
+    <p class="ar" lang="ar" dir="rtl" style="text-align:left">أسئلة المراجعة مع الحلول، وما يجب حفظه للامتحان</p>
+    <nav class="btns">
+      <a class="btn" href="#sorular">Sorular ve cevaplar</a>
+      <a class="btn" href="#ezber" lang="ar">ماذا يحفظ؟</a>
+      <a class="btn ghost" href="MASAL%20VE%20DESTANLARIMIZ%20%C3%87ALI%C5%9EMA%20SORULARI.pdf" download>PDF · Sorular</a>
+      <a class="btn ghost" href="MASAL%20-%20NE%20EZBERLENMEL%C4%B0.pdf" download>PDF · Ezber</a>
+    </nav>
+  </div>
+</header>
+
+<section class="part" id="sorular">
+  <div class="wrap">
+    <h2><span>ÇALIŞMA SORULARI</span>Sorular ve cevaplar</h2>
+
+    <div class="card story">
+      <p>Bir zamanlar, yemyeşil bir ormanda küçük bir ateş böceği yaşarmış. Adı Pırpır’mış. Pırpır’ın tek bir hayali varmış: Gece gökyüzündeki kocaman dolunay kadar parlak ışık saçabilmek. Bir gece, ne kadar uğraşsa da aydan daha fazla parlayamadığını görüp üzüntüyle bir yaprağın üzerine konmuş. Bunu gören yaşlı baykuş yanına süzülmüş ve şöyle demiş:</p>
+      <p><q>Küçük ateş böceği, ay karanlık geceye yön verir doğru... Ama sen sık çalılıkların arasına girip kaybolan minik böceklere yol gösterirsin. Senin ışığın az değil, sadece dokunduğu yer farklı.</q></p>
+      <p>Pırpır gülümsemiş. O günden sonra başkalarıyla yarışmayı bırakıp kendi küçük ama sıcak ışığıyla ormanı aydınlatmaya devam etmiş.</p>
+    </div>
+
+    <div class="card">
+      <p class="q"><span class="n">1</span>Yukarıda verilen masalın ana fikrini yazınız.</p>
+      <p class="ans">Herkesin kendine özgü bir değeri vardır; kendimizi başkalarıyla kıyaslamamalıyız.</p>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>Masalların Özellikleri</h3>
+        <ul>
+          <li>Olaylar tamamen hayal ürünüdür ve gerçekte yaşanması mümkün olmayan olağanüstü unsurlar (devler, periler, sihirli nesneler vb.) barındırır.</li>
+          <li>Masallarda yer ve zaman belirsizdir; “Evvel zaman içinde, kalbur saman içinde...” gibi gerçeğe dayanmayan ifadeler kullanılır.</li>
+          <li>Genellikle halk dilinde yazılır, eğitici ve ahlaki bir ders (ana fikir) verme amacı taşır ve olaylar çoğunlukla mutlu sonla biter.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Masalın Bölümleri</h3>
+        <ol class="parts">
+          <li><span><b>Döşeme Bölümü:</b> Masalın başında dinleyicinin dikkatini çekmek için söylenen tekerlemelerin yer aldığı kısımdır.</span></li>
+          <li><span><b>Serim Bölümü:</b> Olayın, yerin, zamanın ve kahramanların tanıtıldığı giriş kısmıdır.</span></li>
+          <li><span><b>Düğüm Bölümü:</b> Olayların iyice karıştığı, merak duygusunun en üst seviyeye ulaştığı kısımdır.</span></li>
+          <li><span><b>Çözüm Bölümü:</b> Düğümün çözüldüğü, iyilerin ödüllendirilip kötülerin cezalandırıldığı ve masalın mutlu sonla bittiği (iyi dileklerle tamamlanan) kısımdır.</span></li>
+        </ol>
+        <div class="flow"><span>Döşeme</span><i>→</i><span>Serim</span><i>→</i><span>Düğüm</span><i>→</i><span>Çözüm</span></div>
+      </div>
+    </div>
+
+    <div class="card quote" style="margin-top:14px">
+      <h3>Masal Tekerlemesine Örnek</h3>
+      <p>“Bir varmış, bir yokmuş. Evvel zaman içinde, kalbur saman içinde, develer tellal iken, pireler berber iken, ben babamın beşiğini tıngır mıngır sallar iken anamı inlettim, babamı dinlettim...”</p>
+    </div>
+
+    <div class="bottom">
+      <table>
+        <thead><tr><th>MEKÂN</th><th>KİŞİ</th></tr></thead>
+        <tbody>
+          <tr><td>Orman</td><td>Keloğlan</td></tr>
+          <tr><td>Gökyüzü</td><td>Yalancı bir çocuk</td></tr>
+          <tr><td>Uzak bir ülke</td><td>Peri kızı</td></tr>
+          <tr><td>Korkunç bir kale</td><td>Dev</td></tr>
+          <tr><td>Bir yanardağın eteği</td><td>Aslan</td></tr>
+          <tr><td>Periler Ülkesi</td><td>Cadı</td></tr>
+          <tr><td>Devler Ülkesi</td><td>Büyücü</td></tr>
+        </tbody>
+      </table>
+      <div class="card">
+        <p class="q"><span class="n">2</span>Yukarıda yer alan mekân ve kişilerden istediklerinizi seçerek kısa bir masal yazınız.</p>
+        <p class="ans"><span class="tag">DÖŞEME</span>Bir varmış, bir yokmuş. Evvel zaman içinde, kalbur saman içinde… <span class="tag">SERİM</span>Uzak bir ülkede Keloğlan adında iyi kalpli bir genç yaşarmış. <span class="tag">DÜĞÜM</span>Bir gün korkunç bir kalede yaşayan dev, köyün suyunu kesmiş; herkes susuz kalmış. Keloğlan yolda yardım ettiği peri kızından sihirli bir tarak almış. <span class="tag">ÇÖZÜM</span>Tarağı kaleye atınca dev derin bir uykuya dalmış ve su yeniden akmış. Köy kurtulmuş. Gökten üç elma düşmüş: biri bana, biri dinleyene, biri de anlatana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="part ez" id="ezber" lang="ar" dir="rtl">
+  <div class="wrap">
+    <h2><span class="tr" style="text-align:right">Masal ve Destanlarımız · Ne ezberlenmeli?</span>ماذا يجب أن يحفظ؟ (4 أشياء فقط)</h2>
+
+    <div class="block">
+      <h3><span class="num">1</span>خصائص الحكاية <span class="tr">Masalların Özellikleri</span></h3>
+      <div class="rows">
+        <div class="head"><div class="tr">Bunu ezberle</div><div class="ar">المعنى</div></div>
+        <div class="row"><div class="tr">Olaylar <b>hayal ürünüdür</b>, <b>olağanüstü</b> unsurlar vardır (dev, peri, sihirli nesneler).</div><div class="ar">الأحداث من الخيال، وفيها عناصر خارقة.</div></div>
+        <div class="row"><div class="tr"><b>Yer ve zaman belirsizdir.</b></div><div class="ar">المكان والزمان غير محدّدين.</div></div>
+        <div class="row"><div class="tr"><b>Halk dilindedir</b>, <b>ders verir (ana fikir)</b>, <b>mutlu sonla biter</b>.</div><div class="ar">بلغة الناس، تعطي درساً، وتنتهي نهاية سعيدة.</div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3><span class="num">2</span>أقسام الحكاية الأربعة بالترتيب (الأهم) <span class="tr">Masalın Bölümleri</span></h3>
+      <div class="flow" style="margin:0 0 10px"><span>Döşeme</span><i>→</i><span>Serim</span><i>→</i><span>Düğüm</span><i>→</i><span>Çözüm</span></div>
+      <div class="rows">
+        <div class="head"><div class="tr">Bunu ezberle</div><div class="ar">المعنى</div></div>
+        <div class="row"><div class="tr"><span class="k">Döşeme</span>Dikkati çekmek için söylenen <b>tekerleme</b> bölümüdür.</div><div class="ar">التكرارية في البداية لجذب الانتباه.</div></div>
+        <div class="row"><div class="tr"><span class="k">Serim</span><b>Olay, yer, zaman ve kahramanlar</b> tanıtılır.</div><div class="ar">تعريف الحدث والمكان والزمان والأبطال.</div></div>
+        <div class="row"><div class="tr"><span class="k">Düğüm</span>Olaylar <b>karışır</b>, <b>merak</b> artar.</div><div class="ar">العقدة: الأحداث تتعقّد والتشويق يزيد.</div></div>
+        <div class="row"><div class="tr"><span class="k">Çözüm</span>Düğüm <b>çözülür</b>, iyiler ödüllendirilir, kötüler cezalandırılır, <b>mutlu son</b>.</div><div class="ar">الحل: يُكافأ الطيب ويُعاقب الشرير، ونهاية سعيدة.</div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3><span class="num">3</span>بداية التكرارية <span class="tr">Tekerleme</span></h3>
+      <div class="say"><span class="tr">“Bir varmış, bir yokmuş. Evvel zaman içinde, kalbur saman içinde…”</span><span class="ar">يكفي حفظ أولها: كان يا ما كان، في قديم الزمان…</span></div>
+    </div>
+
+    <div class="block">
+      <h3><span class="num">4</span>الفكرة الرئيسية لحكاية <bdi>Pırpır</bdi> <span class="tr">Ana fikir</span></h3>
+      <div class="say pen"><span class="tr">Herkesin kendine özgü bir değeri vardır; kendimizi başkalarıyla kıyaslamamalıyız.</span><span class="ar">لكل واحد قيمته الخاصة، فلا نقارن أنفسنا بالآخرين. (قد يأتي السؤال نفسه)</span></div>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>سؤال «اكتب حكاية قصيرة»: احفظ القالب فقط</h3>
+        <ol class="steps">
+          <li><span><b class="tr">Döşeme</b>: ابدأ بالتكرارية<span class="tr ex">Bir varmış, bir yokmuş…</span></span></li>
+          <li><span><b class="tr">Serim</b>: أين؟ ومن البطل؟ (من الجدول)<span class="tr ex">Uzak bir ülkede Keloğlan yaşarmış.</span></span></li>
+          <li><span><b class="tr">Düğüm</b>: تحدث مشكلة<span class="tr ex">Dev köyün suyunu kesmiş.</span></span></li>
+          <li><span><b class="tr">Çözüm</b>: تُحلّ المشكلة ونهاية سعيدة<span class="tr ex">Gökten üç elma düşmüş…</span></span></li>
+        </ol>
+      </div>
+      <div class="card no">
+        <h3>لا يحتاج حفظاً</h3>
+        <ul>
+          <li>نص حكاية <span class="tr">Pırpır</span>: يكفي فهمه.</li>
+          <li>جدول الأماكن والأشخاص: يكون في ورقة الامتحان.</li>
+          <li>الجمل الطويلة كاملة: تكفي الكلمات العريضة.</li>
+        </ul>
+        <p class="note">جدول الامتحان فيه أشخاص وأماكن، يختار منها ما يشاء ويضعها في القالب.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="btns">
+      <a class="btn ghost" href="MASAL%20VE%20DESTANLARIMIZ%20%C3%87ALI%C5%9EMA%20SORULARI.pdf" download>PDF · Çalışma soruları</a>
+      <a class="btn ghost" href="MASAL%20-%20NE%20EZBERLENMEL%C4%B0.pdf" download>PDF · Ne ezberlenmeli?</a>
+    </div>
+    <p>Masal ve Destanlarımız · 7. sınıf Türkçe</p>
+  </div>
+</footer>
+</body>
+</html>
